@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "infra/" # Caminho para os arquivos Terraform
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "maven"
+    directory: "app/" # Ajuste se o pom.xml estiver em outro diretório
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/" # Diretório raiz para workflows do GitHub Actions
+    schedule:
+      interval: "weekly"
